@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- <img src="images/Dhruv.png" class="logo"> -->
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Web Developer</p>
+                <h1>Hi, I am Dhruv Shah <br> from Svit Vasad</h1>
+            </div>
+        </div>
+    </div>
+<!-- about -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="column-1">
+                <img src="images/dhruv-removebg-preview.jpg">
+            </div>
+            <div class="column-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> Currently pursuing Bachelor of engineering in Computer engineering in Svit College Vasad.
+                    I'm a passionate beginner eager to explore the world of programming and web development. 
+                    While I'm just starting my journey, I'm enthusiastic about learning and growing in areas like
+                    C, HTML, CSS, JavaScript. 
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                    <p class="tab-links" onclick="opentab('education', event)">Education</p>
+
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Front-End Web Developer</span><br>web/App Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Higher Secondary School </span><br>At Bhulka Vihar School</li>
+                        <li><span>BE in Computer engineering</span><br>At SVIT Vasad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Skills</h1>
+        <div class="service-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Front-End web Developer</h2>
+                <p> HTML, CSS, JavaScript, Reactjs
+                    I am keen to learn more about Front-End Web-Development
+                    and will learn more about full-stack development soon.
+                </p>
+                <h2>UI/UX Design</h2>
+                <p>I'm enthusiastic about learning and growing in
+                    areas like Canva, Figma and Many More.
+                    I'm working on these by doing some Amazing Projects 
+                    Which are Provided in projects section.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="project-list">
+            <div class="project">
+                <img src="images/Green Gold Vintage Retro Craft Brewery Badge Logo.png" alt="Project 1">
+                <h2>Cafe Website</h2>
+                <p>This website is regarding information above an cafe named "The Surti Cafe which is designed using html, css, Javascript".</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project">
+                <img src="images/tictactoe.png" class="img-2" alt="Project 2">
+                <h2>TicTacToe Game</h2>
+                <p>A responsive Gaming Website which is based on TicTacToe Game.</p>
+                <p>I have use javascript, Html and css in this tictactoe Game</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project">
+                <img src="images/shoes.png" class="img-2" alt="Project 2">
+                <h2>Shoes description</h2>
+                <p>This is a design that describe the detail of shoes and this design is done using Figma</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project">
+                <img src="images/portfolio.png" class="img-2" alt="Project 2">
+                <h2>My Portfolio</h2>
+                <p>This is a My Personal Portfolio that Describe about my education, my skills, my projects and many more valuable things about me.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1>Contact Me</h1>
+                <P><i class="fa-solid fa-paper-plane"></i> dhruvshah32897@gmail.com</P>
+                <p><i class="fa-solid fa-square-phone"></i>xxxxxxxxxx</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <a href="#" class="btn">View Resume</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname, event) {
+    for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+</body>
+</html>
